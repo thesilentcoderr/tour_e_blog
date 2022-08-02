@@ -1,0 +1,41 @@
+{% block CDN %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>tour-e-blog</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for ('static',filename='favicon.ico') }}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    </head>
+{% endblock %} {% block meta %}
+    <meta charset="utf-8"> 
+{% endblock %} 
+
+
+{% block content %}
+    
+    <!--Include NavBar-->
+    {% include 'nw_nav.html' %}
+    <!--Include Messages-->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        <ul class="list-group">
+            {% for category, message in messages %}
+            <li class="alert alert-{{category}}">
+                {{ message }}
+            </li>
+            {% endfor %}
+        </ul>
+    {% endwith %}
+        {% block subcontent %} {% endblock %}
+{% endblock %}
+
+</html>

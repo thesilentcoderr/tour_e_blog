@@ -1,0 +1,11 @@
+{
+    "sql_conf":
+    {
+        "mysql_host": "<host_name>",
+        "mysql_user": "<user_name>",
+        "mysql_password": "<user_pass>",
+        "mysql_db": "tour_e_blog",
+        "mysql_port": 3306
+    }
+    
+}
