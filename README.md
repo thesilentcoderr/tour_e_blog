@@ -15,4 +15,4 @@
   - ```mysql -u <your_uname> -p <db_name> < tour_e_blog.sql```
   - Update vars.json with your credentials
   - ```pip install -r requirements.txt```
-  - ```python app.py
+  - ```python wsgi.py```
